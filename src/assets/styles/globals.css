@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities{
+    .form-input{
+        @apply px-5 py-2 w-full border border-solid border-primary rounded-lg bg-surface  focus:outline-none
+    }
+    .form-button{
+        @apply bg-primary text-background rounded-xl w-full h-10
+    }
+    
+}
+select ,input{
+  background-color: transparent !important;
+  outline: none !important;
+}
+
+
