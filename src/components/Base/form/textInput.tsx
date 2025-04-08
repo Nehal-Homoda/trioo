@@ -2,7 +2,7 @@
 'use client'
 import React, { useState } from 'react'
 
-export default function TextInput({label,placeholder,required}) {
+export default function TextInput({label,placeholder,required,value,onchange}) {
     const [textInputValue,setTextInputValue]=useState('')
     const handleChangeInput=(event)=>{
         setTextInputValue(event.target.value)
@@ -11,7 +11,7 @@ export default function TextInput({label,placeholder,required}) {
   return (
     <div>
         <label htmlFor={label}>{label}</label>
-        <input value={textInputValue} onChange={handleChangeInput} type="text"  placeholder={placeholder} required={required} className='form-input'/>
+        <input value={value} onChange={onchange} type="text"  placeholder={placeholder} required={required} className='form-input'/>
     </div>
   )
 }
